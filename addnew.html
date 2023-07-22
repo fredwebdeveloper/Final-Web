@@ -1,0 +1,281 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>News Portal</title>
+	<meta charset="utf-8">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href=
+"https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js">
+	</script>
+	<script src=
+"https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js">
+	</script>
+</head>
+<body>
+	<div class="container" style="color:green">
+		<h1>Pastor Junas T. Carreon</h1>
+	</div>
+	<div class="container">
+		<h4>Through the grace of Christ we shall live in obedience to the law of God written upon our hearts. Having the Spirit of Christ, we shall walk even as He walked. 
+			<i>Ellen G. White</i>
+</h4>
+	</div>
+	<div class="container">
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#">
+						
+					</a>
+				</div>
+				<ul class="nav navbar-nav">
+					<li class="active">
+						<a href="index.html">Home</a>
+					</li>
+					<li><a href="new.html">News</a></li>
+					<li><a href="article.html">Articles</a></li>
+					<li><a href="lessonrev.html">Lesson Review</a></li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+</body>
+</html>
+
+
+<html lang="en">
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+	
+
+					
+					
+		<div class="container">
+			<div class="bg bg-success">
+				<table class="table table-hover">
+				<tr class="danger">
+					<td>Small Groups</td>
+					
+					
+				</tr>
+				
+				</table>
+				<ul class="nav">
+  <li class="nav-item">
+    <a class="nav-link active" href="smallgroup.html">Click to Show details</a>
+  </li>
+					
+	
+				<table class="table table-hover">
+				<tr class="danger">
+					<td>Children Ministry</td>
+					
+				</tr>
+				
+				</table>
+				<ul class="nav">
+  <li class="nav-item">
+    <a class="nav-link active" href="childrenministry.html">Click to Show details</a>
+  </li>
+					
+	<table class="table table-hover">
+				<tr class="danger">
+					<td>Youth Ministry</td>
+					
+				</tr>
+				
+				</table>
+				<ul class="nav">
+  <li class="nav-item">
+    <a class="nav-link active" href="youthministry.html">Click to Show details</a>
+  </li>				
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+	
+					
+					
+
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./css//style.css" />
+        <title>Add News</title>
+    <link rel="shorcut icon" type="x-ixon" href="sda%20logo.png">
+    <meta name="viewport" content="width=device-width, initial scale-1.0">
+    </head>
+    <link href=
+"https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+        rel="stylesheet">
+    <script src=
+"https://code.jquery.com/jquery-1.10.2.js">
+    </script>
+    <script src=
+"https://code.jquery.com/ui/1.10.4/jquery-ui.js">
+    </script>
+</head>
+ 
+<body>
+    <mark><h3>Daily News Update</h3></mark>
+ 
+    <p>Date:
+        <input type="text" id="dob">
+    </p>
+     
+    <script>
+        $("#dob").datepicker();
+    </script>
+	
+	
+</body>
+ 
+
+
+
+	
+	<input type="file" id="uploadVideoFile" accept="video/*" />
+
+<div id="videoSourceWrapper">
+   <video style="width: 100%;" controls>
+      <source id="videoSource"/>
+   </video>
+  <div id="uploadVideoProgressBar" style="height: 5px; width: 1%; background: #2781e9; margin-top: -5px;"></div>   
+</div>
+	
+		
+
+	<script>
+	$(document).ready(function(){
+	$("#videoSourceWrapper").hide();
+});
+
+
+$('#uploadVideoFile').on('change',
+    function() {
+        var fileInput = document.getElementById("uploadVideoFile");
+        console.log('Trying to upload the video file: %O', fileInput);
+
+        if ('files' in fileInput) {
+            if (fileInput.files.length === 0) {
+                alert("Select a file to upload");
+            } else {
+                var $source = $('#videoSource');
+                $source[0].src = URL.createObjectURL(this.files[0]);
+                $source.parent()[0].load();
+                $("#videoSourceWrapper").show();
+                UploadVideo(fileInput.files[0]);
+            }
+        } else {
+            console.log('No found "files" property');
+        }
+    }
+);
+
+function UploadVideo(file) {
+		var loaded = 0;
+    var chunkSize = 500000;
+    var total = file.size;
+    var reader = new FileReader();
+    var slice = file.slice(0, chunkSize);
+            
+    // Reading a chunk to invoke the 'onload' event
+    reader.readAsBinaryString(slice); 
+    console.log('Started uploading file "' + file.name + '"');
+    $('#uploadVideoProgressBar').show();
+        
+    reader.onload = function (e) {
+       //Just simulate API
+  		setTimeout(function(){
+    		loaded += chunkSize;
+      	var percentLoaded = Math.min((loaded / total) * 100, 100);
+      	console.log('Uploaded ' + Math.floor(percentLoaded) + '% of file "' + file.name + '"');
+      	$('#uploadVideoProgressBar').width(percentLoaded + "%");
+
+      	//Read the next chunk and call 'onload' event again
+      	if (loaded <= total) {
+      		slice = file.slice(loaded, loaded + chunkSize);
+        	reader.readAsBinaryString(slice);
+	      } else { 
+  	    	loaded = total;
+    	    console.log('File "' + file.name + '" uploaded successfully!');
+      	  $('#uploadVideoProgressBar').hide();
+      	}
+  		}, 250);
+    }
+}
+
+
+
+function PostChunk(){
+        //Send the sliced chunk to the REST API
+        $.ajax({
+            url: "http://api/url/etc",
+            type: "POST",
+            data: slice,
+            processData: false,
+            contentType: false,
+            error: (function (errorData) {
+                console.log(errorData);
+                alert("Video Upload Failed");
+            })
+        }).done(function (e) { 
+            //The chunk is successfully uploaded!
+            loaded += chunkSize;
+            var percentLoaded = Math.min((loaded / total) * 100, 100);
+            console.log('Uploaded ' + Math.floor(percentLoaded) + '% of file "' + file.name + '"');
+            $('#uploadVideoProgressBar').width(percentLoaded + "%");
+
+            //Read the next chunk and call 'onload' event again
+            if (loaded <= total) {
+                slice = file.slice(loaded, loaded + chunkSize);
+                isFirstChunk = false;
+                reader.readAsBinaryString(slice);
+            } else { 
+                loaded = total;
+                console.log('File "' + file.name + '" uploaded successfully!');
+                $('#uploadVideoProgressBar').hide();
+            }
+        });
+}
+
+
+
+	</script>
+		
+
+<center>  All Rights Reserved 2023: Pastor Junas T. Carreon/ Website</center>
+       
+
+
